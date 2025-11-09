@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/my-films/static/css/main.4943853d.css",
+    "main.js": "/my-films/static/js/main.29c14301.js",
+    "static/js/453.a9543b0f.chunk.js": "/my-films/static/js/453.a9543b0f.chunk.js",
+    "static/media/Vazir.ttf": "/my-films/static/media/Vazir.0bd162dfd1326bee1f01.ttf",
+    "static/media/Vazir.woff": "/my-films/static/media/Vazir.21b45d02bc597b7d274d.woff",
+    "index.html": "/my-films/index.html",
+    "main.4943853d.css.map": "/my-films/static/css/main.4943853d.css.map",
+    "main.29c14301.js.map": "/my-films/static/js/main.29c14301.js.map",
+    "453.a9543b0f.chunk.js.map": "/my-films/static/js/453.a9543b0f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4943853d.css",
+    "static/js/main.29c14301.js"
+  ]
+}
