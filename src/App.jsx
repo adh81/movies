@@ -60,7 +60,9 @@ function App() {
         <Route path="/" element={<MovieList movies={movies} />} />
         <Route
           path="/movie/:id"
-          element={<MovieDetails addToFavorites={addToFavorites} />}
+          element={<MovieDetails addToFavorites={addToFavorites} 
+          removeFromFavorites={removeFromFavorites}
+          favorites={favorites} />}
         />
         <Route
           path="/favorites"
