@@ -1,42 +1,54 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 const MovieCard = ({ movie }) => {
-
-  const navigate = useNavigate();
-
-  const handleDetails =()=>{
-    navigate(`/movie/${movie.id}`)
-  };
-
   return (
-    <div className="card h-100 shadow-sm">
-      <img 
-        src={movie.img} 
+    <div className="card h-100 shadow-sm bg-dark text-light">
+
+      <img
+        src={
+          movie.poster_path
+            ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+            : "https://via.placeholder.com/500x750?text=No+Image"
+        }
         className="card-img-top"
         alt={movie.title}
-        style={{ height: '300px', objectFit: 'cover' }}
+        style={{ height: "350px", objectFit: "cover" }}
       />
+
       <div className="card-body d-flex flex-column">
         <h5 className="card-title">{movie.title}</h5>
-        <p className="text-muted small">کارگردان: {movie.director}</p>
-        <div className="mb-2">
-          {movie.genre.map((genre, index) => (
-            <span key={index} className="badge bg-secondary me-1 mb-1">
-              {genre}
-            </span>
-          ))}
-        </div>
+
+        {/* توضیحات کوتاه */}
+        <p className="text-muted small" style={{ color: "#ccc" }}>
+          {movie.overview
+            ? movie.overview.slice(0, 80) + "..."
+            : "بدون توضیحات"}
+        </p>
+
         <div className="mt-auto">
+          {/* امتیاز و سال ساخت */}
           <div className="d-flex justify-content-between align-items-center mb-2">
-            <span className="text-warning">★ {movie.rating}</span>
-            <span className="text-muted">{movie.year}</span>
+            <span className="text-warning">★ {movie.vote_average}</span>
+
+            <span className="text-muted">
+              {movie.release_date
+                ? movie.release_date.split("-")[0]
+                : "-----"}
+            </span>
           </div>
-          <button className="btn btn-primary btn-sm w-100" onClick={handleDetails}>
+
+          {/* دکمه جزئیات */}
+          <Link
+            to={`/movie/${movie.id}`}
+            className="btn btn-primary btn-sm w-100"
+          >
             مشاهده جزئیات
-          </button>
+          </Link>
         </div>
       </div>
     </div>
   );
 };
+
 export default MovieCard;
