@@ -1,4 +1,5 @@
 import Search from "./Search";
+import { Link } from "react-router-dom";
 import react from "react";
 const Navbar = ({onSearch}) => {
 
@@ -10,11 +11,13 @@ const Navbar = ({onSearch}) => {
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <a class="navbar-brand" href="#">فیلمهای من</a>
+    
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#home">صفحه اصلی</a>
         </li>
         <li class="nav-item">
+          
           <a class="nav-link" href="#">درباره</a>
         </li>
         <li class="nav-item">
@@ -22,7 +25,8 @@ const Navbar = ({onSearch}) => {
         </li>
     
       </ul>
-      <a className="nav-link text-light" href="/favorites">علاقمندی ها</a>
+      <Link className="nav-link text-light" to={"/favorites"}>علاقمندی ها</Link>
+      
        <Search onSearch={onSearch}/>
 
     </div>

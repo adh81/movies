@@ -1,5 +1,6 @@
 
-import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
     return (
@@ -36,14 +37,13 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li className="mb-2">
-                                <a href="/favorites" className="text-light opacity-75 text-decoration-none">
-                                    علاقه‌مندی‌ها
-                                </a>
+                                <Link className="text-light opacity-75 text-decoration-none" to={"/favorites"}>
+                               علاقه‌مندی‌ها </Link>
+                                
                             </li>
                             <li className="mb-2">
-                                <a href="/movies" className="text-light opacity-75 text-decoration-none">
-                                    همه فیلم‌ها
-                                </a>
+                                <Link className="text-light opacity-75 text-decoration-none" to={"/movies"}>همه فیلم‌ها</Link>
+                                
                             </li>
                         </ul>
                     </div>
