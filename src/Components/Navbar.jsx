@@ -14,18 +14,22 @@ const Navbar = ({onSearch}) => {
     
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#home">صفحه اصلی</a>
-        </li>
-        <li class="nav-item">
+          <Link className="nav-link" to={"/"}>صفحه اصلی</Link>
           
-          <a class="nav-link" href="#">درباره</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">جدیدترین ها</a>
+          <Link className="nav-link " to={"/about"}>
+          درباره
+          </Link>
+          
+        </li>
+        <li class="nav-item">
+          <Link className="nav-link" to={"/news"}>جدیدترین ها</Link>
+          
         </li>
     
       </ul>
-      <Link className="nav-link text-light" to={"/favorites"}>علاقمندی ها</Link>
+      <Link className="nav-link text-white " to={"/favorites"}>علاقمندی ها</Link>
       
        <Search onSearch={onSearch}/>
 

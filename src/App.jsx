@@ -5,6 +5,10 @@ import Navbar from "./Components/Navbar";
 import MovieList from "./Components/MovieList";
 import MovieDetails from "./Components/MovieDetails";
 import Footer from "./Components/Footer";
+import About from "../src/Pages/About";
+import News from "./Pages/News";
+
+
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -117,6 +121,8 @@ function App() {
         />
 
         <Route path="/favorites" element={<MovieList movies={favorites} />} />
+        <Route path="/about" element={<About/>}/>
+        <Route path="/news" element={<News/>}/>
       </Routes>
 
       <Footer />

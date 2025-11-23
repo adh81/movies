@@ -92,7 +92,7 @@ const Footer = () => {
                     <div className="col-md-6 text-center text-md-end">
                         <div className="footer-links">
                             <a href="/privacy" className="text-light opacity-75 text-decoration-none me-3">
-                                حریم خصوصی
+                                حریم خصوصی {" "}
                             </a>
                             <a href="/terms" className="text-light opacity-75 text-decoration-none">
                                 شرایط استفاده
