@@ -1,4 +1,5 @@
 # Getting Started with Create React App
+![preview](https://github.com/adh81/movies/raw/main/website-preview.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
